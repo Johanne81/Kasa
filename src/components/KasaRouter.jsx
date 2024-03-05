@@ -1,14 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "../routes/about";
+import Home from "../routes/home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Page d'accueil</div>,
+    element: <Home />,
   },
   {
     path: "/a-propos",
-    element: <div>A propos</div>,
+    element: <About />,
   },
 ]);
 const KasaRouter = () => {
