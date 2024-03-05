@@ -11,6 +11,10 @@ const router = createBrowserRouter([
     path: "/a-propos",
     element: <About />,
   },
+  {
+    path: "*",
+    element: <div>Page non trouvée</div>,
+  },
 ]);
 const KasaRouter = () => {
     return (
