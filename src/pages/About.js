@@ -1,16 +1,14 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-function About() {
+const About = () => {
   return (
     <>
-        <Header />
-        <div className="a-propos">
-            hello à propos
-        </div>
-        <Footer />
+      <Header />
+      <p>Hello A Propos</p>
+      <Footer />
     </>
   );
-}
+};
 
 export default About;
