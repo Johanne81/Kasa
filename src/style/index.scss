@@ -1,0 +1,41 @@
+
+* {
+    max-width: 1440px;
+}
+body {
+    margin: 20px;
+    background-color: white;
+    font-family: Montserrat, sans-serif;
+}
+// Variables color
+$color-1: #FF6060;
+
+//Style Header
+header {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin-top: 20px;
+}
+.logo-kasa {
+    width: 210.32px;
+    height: 68px;
+}
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.navigation li {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.navigation li a {
+    color: black;
+    text-decoration: none;
+}
+.navigation li a.nav-active {
+    text-decoration: underline;
+  }
+// Fin style Header

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./style/index.scss";
 import KasaRouter from "./components/KasaRouter";
 import reportWebVitals from "./reportWebVitals";
 
