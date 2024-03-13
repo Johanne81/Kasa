@@ -6,7 +6,7 @@ const FicheLogement = () => {
   return (
     <div>
       <Header />
-      <p>Ceci est la fiche logement</p>
+      Ceci est la fiche logement !
       <Footer />
     </div>
   );
