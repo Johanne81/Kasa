@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ title, cover }) => {
+const Card = ({ id, title, cover }) => {
+  console.log(id);
   return (
-    <div className="card">
-      <img src={cover} alt={title} />
-      <h2>{title}</h2>
-    </div>
+    <Link to={`/Fiche-Logement/${id}`}>
+      <div className="card">
+        <img src={cover} alt={title} />
+        <h2>{title}</h2>
+      </div>
+    </Link>
   );
 };
 

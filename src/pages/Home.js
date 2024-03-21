@@ -7,12 +7,24 @@ import Card from "../components/Card";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
-      .then((response) => response.json())
-      .then((data) => setProperties(data))
-      .catch((error) => console.log(error));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Not Found");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProperties(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -23,13 +35,18 @@ const Home = () => {
           <h1>Chez vous, partout et ailleurs</h1>
         </Banner>
         <div className="gallery">
-          {properties.map((property) => (
-            <Card
-              key={property.id}
-              title={property.title}
-              cover={property.cover}
-            />
-          ))}
+          {isLoading ? (
+            <div>Chargement en cours...</div>
+          ) : (
+            properties.map((property) => (
+              <Card
+                key={property.id}
+                id={property.id}
+                title={property.title}
+                cover={property.cover}
+              />
+            ))
+          )}
         </div>
       </main>
       <Footer />

@@ -77,33 +77,37 @@ header {
     padding: 20px;
     box-sizing: border-box;
 
-    .card {
-        width: 340px;
-        height: 340px;
-        background: rgb(235, 69, 69);
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 15px;
- 
-        img {
-            width: 100%;
-            height : 80%;
-            border-radius: 10px 10px 0 0;
-            object-fit: cover;
-        }
+        a {
+            text-decoration: none;
 
-        h2 {
-            font-size: 18px;
-            color: white;
-            width: 80%;
-            margin: 10px;
-            text-align: left;
+        .card {
+            width: 340px;
+            height: 340px;
+            background: rgb(235, 69, 69);
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px;
+    
+            img {
+                width: 100%;
+                height : 80%;
+                border-radius: 10px 10px 0 0;
+                object-fit: cover;
+            }
+
+            h2 {
+                font-size: 18px;
+                color: white;
+                width: 80%;
+                margin: 10px;
+                text-align: left;
+            }
         }
-    }
-}    
+    }   
+} 
 
 //Style collapse
 .collapses-container {
@@ -124,7 +128,7 @@ header {
                 align-items: center;
                 justify-content: space-between;
                 height: 20px;
-                background: #FF6060;
+                background: $color-1;
                 color: white;
                 font-weight: 700;
                 padding: 1rem;
@@ -168,13 +172,13 @@ header {
 
     h2 {
         font-size: 180px;
-        color :#FF6060;
+        color : $color-1;
         margin: 0;
         }
 
     p {
         font-size: 36px;
-        color :#FF6060;
+        color: $color-1;
         margin: 60px 0;
         max-width: 872px;
     }
@@ -205,4 +209,36 @@ footer {
     margin-top: 50px;
     }
 }
+
+@media screen and (min-width:320px) and (max-width: 767px) {
+    header, main {  
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+    }
+    .navigation ul li a {
+        font-size: 12px;
+    } 
+    
+    .banner .banner-container {
+        width: 355px;
+        height: 111px;
+    }
+        
+    .banner .banner-container h1 {
+            font-size: 24px;
+        } 
+
+    .gallery {
+        background-color: white;    
+    
+        .card {
+            width: 100%; 
+            margin: 0;
+        }
+    }    
+    
+
+}      
+                   
 
