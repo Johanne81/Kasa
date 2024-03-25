@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Slideshow from "../components/Slideshow";
 
 const FicheLogement = () => {
   const { id } = useParams();
@@ -34,11 +35,14 @@ const FicheLogement = () => {
   return (
     <div>
       <Header />
-      {property && (
-        <div>
-          <h1>{property.title}</h1>
-        </div>
-      )}
+      <main>
+        {property && (
+          <>
+            <Slideshow pictures={property.pictures} alt={property.title} />
+            <h1>{property.title}</h1>
+          </>
+        )}
+      </main>
       <Footer />
     </div>
   );

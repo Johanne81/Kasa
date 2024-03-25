@@ -1,6 +1,10 @@
 // Variables color
 $color-1: #FF6060;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -40,7 +44,28 @@ header {
     }            
 }
 
-// Style Banner
+//Style Footer
+footer {
+    background-color: black;
+    width: 100%;
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    img {
+        margin-top: 50px;
+    }
+
+    p {
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    }
+}
+
+// Style Banner (page Home et About us)
 .banner {
     margin: 20px auto;
     max-width: 1240px;
@@ -63,7 +88,7 @@ header {
     }
 }      
 
-//Style gallery
+//Style gallery (page Home)
 .gallery {
     max-width: 1240px;
     height: auto;
@@ -109,7 +134,7 @@ header {
     }   
 } 
 
-//Style collapse
+//Style collapse (Page About us)
 .collapses-container {
     display: flex;
     margin: 50px auto ;
@@ -161,6 +186,60 @@ header {
     }
 }
 
+//Style page Fiche Logement
+.carousel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1240px;
+    height: 415px;
+    margin: 20px auto;
+    position: relative; //Important pour le positioinnement du compteur
+    
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+.slide {
+    display: none;
+}
+.slide.active {
+    display: block;
+}
+.slideshow-img {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+} 
+.arrow-right {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical précis */
+    width: 96px;
+}
+.arrow-left {
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical précis */
+    width: 96px;
+}
+.counter {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    left: 50%;
+    bottom: 5%;
+}
+
 // Style Page Error
 .error {
     display: flex;
@@ -189,26 +268,7 @@ header {
     }   
 }
 
-//Style Footer
-footer {
-    background-color: black;
-    width: 100%;
-    height: 209px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
 
-    img {
-        margin-top: 50px;
-    }
-
-    p {
-    color: white;
-    font-size: 24px;
-    margin-top: 50px;
-    }
-}
 
 @media screen and (min-width:320px) and (max-width: 767px) {
     header, main {  
