@@ -187,6 +187,7 @@ footer {
 }
 
 //Style page Fiche Logement
+//Style pour slideshow
 .carousel {
     display: flex;
     justify-content: center;
@@ -194,7 +195,7 @@ footer {
     max-width: 1240px;
     height: 415px;
     margin: 20px auto;
-    position: relative; //Important pour le positioinnement du compteur
+    position: relative; //Important pour le positionnement du compteur
     
 }
 .carousel-inner {
@@ -239,6 +240,9 @@ footer {
     left: 50%;
     bottom: 5%;
 }
+
+// Style pour les détails de la fiche logement, sous le carrousel
+
 
 // Style Page Error
 .error {

@@ -33,18 +33,42 @@ const FicheLogement = () => {
   }, [error, navigate]);
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         {property && (
           <>
-            <Slideshow pictures={property.pictures} alt={property.title} />
-            <h1>{property.title}</h1>
+            <section className="slideshow">
+              <Slideshow pictures={property.pictures} alt={property.title} />
+            </section>
+            <section className="property-information">
+              <div className="property-details">
+                <h1 className="detail-title">{property.title}</h1>
+                <h2 className="detail-location">{property.location}</h2>
+                <ul className="detail-tags">
+                  {property.tags.map((tag, index) => (
+                    <li className="tag" key={index}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="host-details">
+                <div className="host">
+                  <p>{property.host.name}</p>
+                  <img
+                    src={property.host.picture}
+                    alt={`Photo de profil de :` + property.host.name}
+                  />
+                </div>
+                <div className="stars"></div>
+              </div>
+            </section>
           </>
         )}
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
