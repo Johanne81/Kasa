@@ -55,13 +55,17 @@ const FicheLogement = () => {
               </div>
               <div className="host-details">
                 <div className="host">
-                  <p>{property.host.name}</p>
+                  <p>
+                    {property.host.name.split(" ")[0]}
+                    <br />
+                    {property.host.name.split(" ")[1]}
+                  </p>
                   <img
                     src={property.host.picture}
                     alt={`Photo de profil de :` + property.host.name}
                   />
                 </div>
-                <div className="stars"></div>
+                <div className="stars">exemple 3 étoiles</div>
               </div>
             </section>
           </>

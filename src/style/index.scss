@@ -1,8 +1,10 @@
 // Variables color
-$color-1: #FF6060;
+$main-color: #FF6060;
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -153,7 +155,7 @@ footer {
                 align-items: center;
                 justify-content: space-between;
                 height: 20px;
-                background: $color-1;
+                background: $main-color;
                 color: white;
                 font-weight: 700;
                 padding: 1rem;
@@ -241,8 +243,89 @@ footer {
     bottom: 5%;
 }
 
-// Style pour les détails de la fiche logement, sous le carrousel
+// Style pour les détails de la fiche logement
+.property-information {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    max-width: 1240px;
+}
 
+.property-detail {
+    display: flex;
+}
+
+.detail-title {
+    color: $main-color;
+    font-size: 36px;
+    font-weight: 500;  
+    line-height: 1.3;
+}
+
+.detail-location {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.detail-tags{
+    display: flex;
+    list-style: none;  
+    max-width: 1240px; 
+    height: auto;
+    align-items: center;
+    margin: 20px 0 24px 0;
+}
+
+.tag {
+    width: auto;
+    height: 25px;
+    background-color: $main-color;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 27px 2px 27px;
+    margin: 10px 10px 10px 0px;
+}
+
+.host-details {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.host p {
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.stars {
+    display: flex;
+    margin-top: 20px;
+    height: 36px;
+}
 
 // Style Page Error
 .error {
@@ -255,13 +338,13 @@ footer {
 
     h2 {
         font-size: 180px;
-        color : $color-1;
+        color : $main-color;
         margin: 0;
         }
 
     p {
         font-size: 36px;
-        color: $color-1;
+        color: $main-color;
         margin: 60px 0;
         max-width: 872px;
     }
