@@ -1,5 +1,12 @@
-// Variables color
+// Variables
 $main-color: #FF6060;
+$main-color-text: $main-color; 
+$secondary-color-text: black; 
+$third-color-text: white;
+$color-background: white;
+$font-primary : Montserrat, sans-serif;
+$font-size-base: 18px;
+
 
 * {
     box-sizing: border-box;
@@ -10,8 +17,8 @@ $main-color: #FF6060;
 body {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: white;
-    font-family: Montserrat, sans-serif;
+    background-color: $color-background;
+    font-family: $font-primary;
 }
 
 //Style Header
@@ -21,31 +28,28 @@ header {
     align-items: center;
     margin: 20px auto;
     max-width: 1240px;
-
-    .navigation {
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-
-            li {
-                margin: 20px;
-                font-size: 24px;
-                font-weight: 500;
-
-                a {
-                    color: black;
-                    text-decoration: none;
-
-                    &.nav-active {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }            
+}
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
 
+.navigation li {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.navigation a {
+    color: $secondary-color-text;
+    text-decoration: none;
+
+    &.nav-active {
+        text-decoration: underline;
+    }
+}
+            
 //Style Footer
 footer {
     background-color: black;
@@ -61,7 +65,7 @@ footer {
     }
 
     p {
-    color: white;
+    color: $third-color-text;
     font-size: 24px;
     margin-top: 50px;
     }
@@ -83,7 +87,7 @@ footer {
         
 
         h1 {
-            color: white;
+            color: $third-color-text;
             font-size: 48px;
             font-weight: 700;
         } 
@@ -103,11 +107,12 @@ footer {
     margin:30px auto;
     padding: 20px;
     box-sizing: border-box;
+}
+.gallery a {
+    text-decoration: none;
+}
 
-        a {
-            text-decoration: none;
-
-        .card {
+.gallery a .card {
             width: 340px;
             height: 340px;
             background: rgb(235, 69, 69);
@@ -126,68 +131,67 @@ footer {
             }
 
             h2 {
-                font-size: 18px;
-                color: white;
+                font-size: $font-size-base;
+                color: $third-color-text;
                 width: 80%;
                 margin: 10px;
                 text-align: left;
             }
         }
-    }   
-} 
-
+      
 //Style collapse (Page About us)
 .collapses-container {
     display: flex;
     margin: 50px auto ;
     justify-content: center;
     align-items: center;
+}
 
-    .collapses {
-        width: 100%;
-        max-width: 1023px;
+.collapses {
+    width: 100%;
+    max-width: 1023px;
+}
 
-        .collapse {
-            margin-bottom: 30px;
+.collapse {
+    margin-bottom: 30px;
+}
 
-            .collapse-title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                height: 20px;
-                background: $main-color;
-                color: white;
-                font-weight: 700;
-                padding: 1rem;
-                font-size: 24px;
+.collapse-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    background: $main-color;
+    color: $third-color-text;
+    font-weight: 700;
+    padding: 1rem;
+    font-size: 24px;
 
-                &:hover {
-                    cursor: pointer;
-                }
-
-                .collapse-icon {
-                    color: white;
-                    font-size: 24px;
-                    transition: transform 0.6s;
-                    
-                    &.active {
-                        transform: rotate(-180deg);
-                    }
-                }
-            }
-            .collapse-content {
-                font-size: 18px;
-                background-color: #F6F6F673;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                text-align:justify;
-                padding : 10px;
-            }
-        }
+    &:hover {
+        cursor: pointer;
     }
 }
 
+.collapse-icon {
+    color: $third-color-text;
+    font-size: 24px;
+    transition: transform 0.6s;
+    
+    &.active {
+        transform: rotate(-180deg);
+    }
+}
+            
+.collapse-content {
+    font-size: $font-size-base;
+    background-color: #F6F6F673;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align:justify;
+    padding : 10px;
+}
+        
 //Style page Fiche Logement
 //Style pour slideshow
 .carousel {
@@ -237,8 +241,8 @@ footer {
 }
 .counter {
     position: absolute;
-    font-size: 18px;
-    color: white;
+    font-size: $font-size-base;
+    color: $third-color-text;
     left: 50%;
     bottom: 5%;
 }
@@ -256,15 +260,15 @@ footer {
 }
 
 .detail-title {
-    color: $main-color;
+    color: $main-color-text;
     font-size: 36px;
     font-weight: 500;  
     line-height: 1.3;
 }
 
 .detail-location {
-    color: black;
-    font-size: 18px;
+    color: $secondary-color-text;
+    font-size: $font-size-base;
     font-weight: 500;
 }
 
@@ -286,7 +290,7 @@ footer {
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
-    color: white;
+    color: $third-color-text;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -313,19 +317,23 @@ footer {
 }
 
 .host p {
-    color: $main-color;
-    font-size: 18px;
+    color: $main-color-text;
+    font-size: $font-size-base;
     font-weight: 500;
     line-height: 1.5;
     text-align: right;
     padding-right: 10px;
 }
-
-.stars {
+.star-ratings {
     display: flex;
     margin-top: 20px;
+}
+.star {
+    display: flex;
+    width: 36px;
     height: 36px;
 }
+
 
 // Style Page Error
 .error {
@@ -338,19 +346,19 @@ footer {
 
     h2 {
         font-size: 180px;
-        color : $main-color;
+        color : $main-color-text;
         margin: 0;
         }
 
     p {
         font-size: 36px;
-        color: $main-color;
+        color: $main-color-text;
         margin: 60px 0;
         max-width: 872px;
     }
     .error-link {
-        font-size: 18px;
-        color: black;
+        font-size: $font-size-base;
+        color: $secondary-color-text;
         margin: 60px 0;
     }   
 }
@@ -377,7 +385,7 @@ footer {
         } 
 
     .gallery {
-        background-color: white;    
+        background-color: $color-background;    
     
         .card {
             width: 100%; 

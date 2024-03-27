@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
+import Stars from "../components/Stars";
 
 const FicheLogement = () => {
   const { id } = useParams();
@@ -65,7 +66,7 @@ const FicheLogement = () => {
                     alt={`Photo de profil de :` + property.host.name}
                   />
                 </div>
-                <div className="stars">exemple 3 étoiles</div>
+                <Stars rating={property.rating} />
               </div>
             </section>
           </>
