@@ -71,7 +71,18 @@ const FicheLogement = () => {
               </div>
             </section>
             <section className="collapses-property">
-              <Collapse />
+              <Collapse
+                title="Description"
+                key={property.description}
+                description={property.description}
+                className="collapse-fiche"
+              />
+              <Collapse
+                title="Equipements"
+                key={property.id}
+                description={property.equipments}
+                className="collapse-fiche"
+              />
             </section>
           </>
         )}

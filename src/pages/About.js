@@ -17,7 +17,9 @@ const About = () => {
               <Collapse
                 key={index}
                 title={item.title}
-                content={item.description}
+                description={item.description}
+                pathname={"/About"}
+                className="collapse-about"
               />
             ))}
           </div>

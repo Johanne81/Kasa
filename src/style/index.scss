@@ -21,6 +21,7 @@ body {
     font-family: $font-primary;
 }
 
+
 //Style Header
 header {
     display: flex;
@@ -139,7 +140,7 @@ footer {
             }
         }
       
-//Style collapse (Page About us)
+//Style collapse de la Page About
 .collapses-container {
     display: flex;
     margin: 50px auto ;
@@ -152,7 +153,7 @@ footer {
     max-width: 1023px;
 }
 
-.collapse {
+.collapse-about {
     margin-bottom: 30px;
 }
 
@@ -165,6 +166,7 @@ footer {
     font-weight: 700;
     padding: 1rem;
     font-size: 24px;
+    height: 52px;
 
     &:hover {
         cursor: pointer;
@@ -191,8 +193,8 @@ footer {
     padding : 10px;
 }
         
-//Style page Fiche Logement
-//Style pour slideshow
+
+//Page FicheLogement, Style pour slideshow
 .carousel {
     display: flex;
     justify-content: center;
@@ -334,6 +336,12 @@ footer {
 }
 .collapses-property {
     display: flex;
+    max-width: 1240px;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.collapse-fiche {
+    width: 45%;
 }
 
 
