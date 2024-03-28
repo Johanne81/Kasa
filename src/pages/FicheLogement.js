@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
 import Stars from "../components/Stars";
+import Collapse from "../components/Collapse";
 
 const FicheLogement = () => {
   const { id } = useParams();
@@ -68,6 +69,9 @@ const FicheLogement = () => {
                 </div>
                 <Stars rating={property.rating} />
               </div>
+            </section>
+            <section className="collapses-property">
+              <Collapse />
             </section>
           </>
         )}

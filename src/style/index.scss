@@ -160,7 +160,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 20px;
     background: $main-color;
     color: $third-color-text;
     font-weight: 700;
@@ -332,6 +331,9 @@ footer {
     display: flex;
     width: 36px;
     height: 36px;
+}
+.collapses-property {
+    display: flex;
 }
 
 
